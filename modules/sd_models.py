@@ -173,14 +173,14 @@ def load_model():
     sd_config = OmegaConf.load(checkpoint_info.config)
     sd_model = instantiate_from_config(sd_config.model)
     load_model_weights(sd_model, checkpoint_info)
-
+    print("pos1")
     if shared.cmd_opts.lowvram or shared.cmd_opts.medvram:
         lowvram.setup_for_low_vram(sd_model, shared.cmd_opts.medvram)
     else:
         sd_model.to(shared.device)
-
+    print("pos2")
     sd_hijack.model_hijack.hijack(sd_model)
-
+    print("pos3")
     sd_model.eval()
 
     print(f"Model loaded.")
