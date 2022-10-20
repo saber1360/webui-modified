@@ -39,5 +39,6 @@ export COMMANDLINE_ARGS="--medvram --opt-split-attention --share"
 #export TAMING_TRANSFORMERS_COMMIT_HASH=""
 #export CODEFORMER_COMMIT_HASH=""
 #export BLIP_COMMIT_HASH=""
+printf "fuck===="
 source webui.sh
 ###########################################
